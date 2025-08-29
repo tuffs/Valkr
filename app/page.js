@@ -1,15 +1,15 @@
+import Title from '@/components/Title';
+
 export default function Home() {
   return (
     <div className="container mt-6">
       <div className="w-full mx-12">
-        <h1 className="text-4xl pb-0 font-bold text-yellow-400">
-          VALKR
-        </h1>
-        <h3 className="text-md text-yellow-300">
-          Simple Toolests for Rapid Next.js Development
-        </h3>
+        <Title
+          title="VALKR"
+          subtitle="Simple Toolsets for Rapid Next.js Development"
+        />
         <div className="text-md text-yellow-100">
-          <p>
+          <p className="py-3">
             In its current form, Next.js does an incredible job of laying the
             groundwork for simple websites and uncomplicated CRUD applications.
             However, it does not have a suite of tools that most application
@@ -27,13 +27,13 @@ export default function Home() {
             package, rather, I seek to provide the tools that will help people
             build rapidly on top of Next.js that engineers consistently need.
           </p>
-          <p>
+          <p className="py-3">
             I hope to provide generators, and add-ins that will provide value and
             can be chosen by developers to include or not easily. VALKR wants to
             provide a layer of software on top of the base Next.js codebase, if
             it is required.
           </p>
-          <p>
+          <p className="py-3">
             The following is a prioritized list of things which will be added to
             the VALKR suite.
           </p>
