@@ -38,11 +38,13 @@ export default function Home() {
             the VALKR suite.
           </p>
           <ul>
-            <li>Point of Contact Messengers:
-              <ul>Transactional Emails</ul>
-              <ul>Text Messaging API</ul>
+            <li className="first-list-item">Point of Contact Messengers:
+              <ul>
+                <li>Transactional Emails</li>
+                <li>Text Messaging API</li>
+              </ul>
             </li>
-            <li>Managed Resources:
+            <li className="first-list-item">Managed Resources:
               <ul>
                 <li>Posts</li>
                 <li>Products</li>
@@ -50,13 +52,13 @@ export default function Home() {
                 <li>Etc..</li>
               </ul>
             </li>
-            <li>Account Management:
+            <li className="first-list-item">Account Management:
               <ul>
                 <li>Administrative Accounts</li>
                 <li>User Profiles/Accounts</li>
               </ul>
             </li>
-            <li>Background System & Public Dashboards for:
+            <li className="first-list-item">Background System & Public Dashboards for:
               <ul>
                 <li>User Profiles</li>
                 <li>Sales Reports</li>
@@ -65,19 +67,19 @@ export default function Home() {
                 <li>Account Overviews</li>
               </ul>
             </li>
-            <li>Media Integrations:
+            <li className="first-list-item">Media Integrations:
               <ul>
                 <li>Image</li>
                 <li>Video</li>
                 <li>Audio</li>
-                <li>Etc..</li>
               </ul>
             </li>
-            <li>SEO Optimizations</li>
-            <li>Rich Text Editor</li>
-            <li>Notifications & Alert Systems</li>
-            <li>Content Tagging</li>
-            <li>Pagination Systems</li>
+            <li className="first-list-item">SEO Optimizations</li>
+            <li className="first-list-item">Rich Text Editor</li>
+            <li className="first-list-item">Notifications & Alert Systems</li>
+            <li className="first-list-item">Content Tagging</li>
+            <li className="first-list-item">Pagination Systems</li>
+            <li>&nbsp;</li>
           </ul>
           <p>
             Each one of these tools will be able to be implemented on-demand,
