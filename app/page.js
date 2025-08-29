@@ -1,103 +1,95 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+    <>
+      <h1 className="text-4xl font-bold text-yellow-400">
+        VALKR
+      </h1>
+      <h3 className="text-md text-yellow-300">
+        Simple Toolests for Rapid Next.js Development
+      </h3>
+      <div className="text-md text-yellow-100">
+        <p>
+          Redefining how devs build applications with Next.js.<br />
+        </p>
+        <p>
+          In its current form, Next.js does an incredible job of laying the
+          groundwork for simple websites and uncomplicated CRUD applications.
+          However, it does not have a suite of tools that most application
+          developers need righ out of the box for almost any application.
+          Authentication? Need a third-party plugin or roll your own. Emails?
+          The same thing... Want to add in some products, services, posts,
+          or other resources, roll your own. There is no standard for these
+          often mandatory services, resources, or helpers. I continously
+          find myself building out these things for each application that I
+          build on top of Next.js. While this is fine to do a few times,
+          it leads me to believe that if these items were all provided as a
+          simple, standard library which is coupled with Next.js- life would be
+          much easier. So I seek to build on top of the framework that Vercel has
+          pioneered. I do not seek to add complexity or mandatory bloat to the
+          package, rather, I seek to provide the tools that will help people
+          build rapidly on top of Next.js that engineers consistently need.
+        </p>
+        <p>
+          I hope to provide generators, and add-ins that will provide value and
+          can be chosen by developers to include or not easily. VALKR wants to
+          provide a layer of software on top of the base Next.js codebase, if
+          it is required.
+        </p>
+        <p>
+          The following is a prioritized list of things which will be added to
+          the VALKR suite.
+          <ul>
+            <li>Point of Contact Messengers:
+              <ul>Transactional Emails</ul>
+              <ul>Text Messaging API</ul>
+            </li>
+            <li>Managed Resources:
+              <ul>
+                <li>Posts</li>
+                <li>Products</li>
+                <li>Appointments</li>
+                <li>Etc..</li>
+              </ul>
+            </li>
+            <li>Account Management:
+              <ul>
+                <li>Administrative Accounts</li>
+                <li>User Profiles/Accounts</li>
+              </ul>
+            </li>
+            <li>Background System & Public Dashboards for:
+              <ul>
+                <li>User Profiles</li>
+                <li>Sales Reports</li>
+                <li>Resource Management</li>
+                <li>Administrative Functionality</li>
+                <li>Account Overviews</li>
+              </ul>
+            </li>
+            <li>Media Integrations:
+              <ul>
+                <li>Image</li>
+                <li>Video</li>
+                <li>Audio</li>
+                <li>Etc..</li>
+              </ul>
+            </li>
+            <li>SEO Optimizations</li>
+            <li>Rich Text Editor</li>
+            <li>Notifications & Alert Systems</li>
+            <li>Content Tagging</li>
+            <li>Pagination Systems</li>
+          </ul>
+        </p>
+        <p>
+          Each one of these tools will be able to be implemented on-demand,
+          pick and choose what you need, leave the rest. VALKR seeks to
+          create a set of tools that simplifies the Next.js devs life while
+          keeping these tools design nuetral with exceptional formatting
+          and easy inclusion as Next.js application extensions that are
+          designed to easily meet your demands.
+        </p>
+      </div>
+    </>
   );
 }
