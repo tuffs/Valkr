@@ -2,7 +2,7 @@ import Title from '@/components/Title';
 
 export default function Home() {
   return (
-    <div className="container mt-6">
+    <div className="container mt-6" data-testid="main_container">
       <div className="w-full mx-12">
         <Title
           title="VALKR"
