@@ -2,8 +2,8 @@ import Title from '@/components/Title';
 
 export default function Home() {
   return (
-    <div className="container mt-6" data-testid="main_container">
-      <div className="w-full mx-12">
+    <div className="container w-[90%] mx-12 mt-6" data-testid="main_container">
+      <div className="mx-12">
         <Title
           title="VALKR"
           subtitle="Simple Toolsets for Rapid Next.js Development"
