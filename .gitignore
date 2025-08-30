@@ -10,6 +10,9 @@
 !.yarn/releases
 !.yarn/versions
 
+# javascript
+dump.js
+
 # testing
 /coverage
 
