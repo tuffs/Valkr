@@ -1,12 +1,7 @@
 // VALKR
+// To Run Quickly: `$ node valkr <command> <action> <argument_a> <argument_b> <argument_c> ...`
 
-// This is the easiest script you will ever encounter.
-// Quickly: npx valkr + <command> + <argument_a> <argument_b> <argument_c>
-
-// Mailer Creators
-// valkr mailer transactions
-
-const VALKR_VERSION_NUMBER = '.01';
+const VALKR_VERSION = '.01';
 
 function VALKR() {
 
@@ -34,7 +29,7 @@ function VALKR() {
       break;
 
     case '--version':
-      console.log(`Version: ${VALKR_VERSION_NUMBER}`);
+      console.log(`Version: ${VALKR_VERSION}`);
       break;
 
     default:
@@ -42,7 +37,7 @@ function VALKR() {
         this script for it to work. Run: valkr help for help!`);
   }
 
-  return null;
+  return true;
 }
 
 function handleGenerate(additionalArgs) {
@@ -55,13 +50,15 @@ function handleGenerate(additionalArgs) {
   if (additionalArgs[0] === 'anything_else') {
     console.log(`anything_else Called...`)
   }
+
+  return true;
 }
 
 function handleHelp() {
   console.log(`
 
     VALKR - HELP DOCUMENTATION
-    VERSION - ${VALKR_VERSION_NUMBER}
+    VERSION - ${VALKR_VERSION}
 
     Thank you for choosing to build your application
     with the help of VALKR, we want to give you
@@ -87,6 +84,8 @@ function handleHelp() {
         $ node valkr generate model appointments
         $ node valkr generate model <name_with_plural_suffix_s>
 `);
+
+  return true;
 }
 
 VALKR();
