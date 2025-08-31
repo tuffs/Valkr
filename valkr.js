@@ -1,5 +1,8 @@
 // VALKR
 
+const fs = require('fs');
+const path = require('path');
+
 // This is the easiest script you will ever encounter.
 // Quickly: npx valkr + <command> + <argument_a> <argument_b> <argument_c>
 
@@ -49,8 +52,42 @@ function handleGenerate(args) {
   if (type === 'mailer') {
     // Handle mailer generation
     console.log('Creating mailer...');
+
+    // Get our mailer name from the first argument
+    const [name, ...remainingOptions] = type;
+
+    const mailerTemplate = `
+    function {%name%}Mailer() {
+      return (
+        <div>
+          <h1>{%name%} Mailer</h1>
+          <p>Mailer stuff for {%name%}Mailer.</p>
+        </div>
+      );
+    };
+    `;
+
+    // Replace Placeholders in mailerTemplate
+    const replaceNameOfFunction = mailerTemplate
+      .reaplceFirst('{%mailerName%}', name);
+
+    const replaceNamesInside = mailerTemplate
+      .replaceAll('{%name%}', name.charAt(0).toUpperCase() + name);
+
+    const outputDir = path.join(process.cwd(), 'components');
+    const outputFile = path.join(outputDir, `${name(Mailer)}.js`);
+
+    // Ensure the output directory exists
+    if (!fs.existsSync(outputDir)) {
+      fs.mkdirSync(outputDir, { recursive: true });
+    }
+
   }
 
+  if (type === 'messenger') {
+    // Handle messenger generation
+    console.log('Creating messenger...');
+  }
 
 }
 
