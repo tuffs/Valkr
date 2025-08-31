@@ -1,18 +1,20 @@
 // VALKR
-// To Run Quickly: `$ node valkr <command> <action> <argument_a> <argument_b> <argument_c> ...`
 
-const VALKR_VERSION = '.01';
+// This is the easiest script you will ever encounter.
+// Quickly: npx valkr + <command> + <argument_a> <argument_b> <argument_c>
+
+// Mailer Creators
+// valkr mailer transactions
+
+const VALKR_VERSION_NUMBER = '.01';
 
 function VALKR() {
 
   const args = process.argv.slice(2);
   const [command, ...additionalArguments] = args;
-
   const additionalArgumentsLength = additionalArguments.length;
 
-
   console.log(`Command: ${command}.`);
-  console.log(`Additoinal Arguments Length: ${additionalArgumentsLength}`);
   console.log(`Additional arguments: ${additionalArguments}`);
 
   // Handle Different Commands
@@ -29,36 +31,34 @@ function VALKR() {
       break;
 
     case '--version':
-      console.log(`Version: ${VALKR_VERSION}`);
+      console.log(`Version: ${VALKR_VERSION_NUMBER}`);
       break;
 
     default:
-      console.error(`You must provide arguments to 
-        this script for it to work. Run: valkr help for help!`);
+      console.error(`Uknown commnd: ${command}`);
+      handleHelp();
   }
 
-  return true;
+  return null;
 }
 
-function handleGenerate(additionalArgs) {
-  console.log(`Generator Called...`);
+function handleGenerate(args) {
+  const [type, ...options] = args;
+  console.log(`Generating ${type} with options:`, options);
 
-  if (additionalArgs[0] === 'mailer') {
-    console.log(`Mailer Called...`);
+  if (type === 'mailer') {
+    // Handle mailer generation
+    console.log('Creating mailer...');
   }
 
-  if (additionalArgs[0] === 'anything_else') {
-    console.log(`anything_else Called...`)
-  }
 
-  return true;
 }
 
 function handleHelp() {
   console.log(`
 
     VALKR - HELP DOCUMENTATION
-    VERSION - ${VALKR_VERSION}
+    VERSION - ${VALKR_VERSION_NUMBER}
 
     Thank you for choosing to build your application
     with the help of VALKR, we want to give you
@@ -84,8 +84,6 @@ function handleHelp() {
         $ node valkr generate model appointments
         $ node valkr generate model <name_with_plural_suffix_s>
 `);
-
-  return true;
 }
 
 VALKR();
