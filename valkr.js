@@ -70,18 +70,27 @@ function handleGenerate(args) {
     // Replace Placeholders in mailerTemplate
     const replaceNameOfFunction = mailerTemplate
       .reaplceFirst('{%mailerName%}', name);
-
     const replaceNamesInside = mailerTemplate
       .replaceAll('{%name%}', name.charAt(0).toUpperCase() + name);
 
+    // Create the output Directory Name and File Name
     const outputDir = path.join(process.cwd(), 'components');
     const outputFile = path.join(outputDir, `${name(Mailer)}.js`);
 
-    // Ensure the output directory exists
+    // Ensure output directory exists
     if (!fs.existsSync(outputDir)) {
       fs.mkdirSync(outputDir, { recursive: true });
     }
 
+    // Write to the file
+    try {
+      fs.writeFileSync(outputFile, generatedContent, 'utf8');
+      console.log(``)
+    } catch (error) {
+      console.error(`Error generating {$name} mailer!`);
+      console.error(`---`);
+      console.error('Error output: ', error);
+    }
   }
 
   if (type === 'messenger') {
